@@ -1,4 +1,4 @@
-package com.best.qa.task1;
+package com.best.qa.lesson2;
 
 public enum ValueType {
     MAX,
