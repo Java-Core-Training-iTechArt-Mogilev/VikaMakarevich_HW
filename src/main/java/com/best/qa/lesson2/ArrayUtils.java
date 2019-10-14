@@ -2,33 +2,32 @@ package com.best.qa.lesson2;
 
 public abstract class ArrayUtils {
 
-    public static double selectValueByType(double[] array, ValueType type) {
+    public static double selectMaxValue(double[] array) {
         double max = array[0];
+
+        for (double element : array) {
+            max = element > max ? element : max;
+        }
+        return max;
+    }
+
+    public static double selectMinValue(double[] array) {
         double min = array[0];
-        double result = 0;
+
+        for (double element : array) {
+            min = element < min ? element : min;
+        }
+        return min;
+    }
+
+    public static double selectAverageValue(double[] array) {
+        double avr = 0;
         double numberArrayElements = array.length;
 
         for (double element : array) {
-            switch (type) {
-                case MAX:
-                    max = element > max ? element : max;
-                    result = max;
-                    break;
-
-                case MIN:
-                    min = element < min ? element : min;
-                    result = min;
-                    break;
-
-                case AVERAGE:
-                    result += element / numberArrayElements;
-                    break;
-
-                default:
-                    break;
-            }
+            avr += element / numberArrayElements;
         }
-        return result;
+        return avr;
     }
 
     public static double[] createArrayWithRandomValues(int numberElements) {
