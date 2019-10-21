@@ -9,35 +9,33 @@ public class Account {
     private String password;
     private List<Balance> balances;
 
-    public Account(String login, String password) {
+    public Account(String login, String password, List<Balance> balances) {
         this.login = login;
         this.password = password;
+        this.balances = balances;
     }
 
     public String getLogin() {
         return login;
     }
 
-    public Account setLogin(String login) {
+    public void setLogin(String login) {
         this.login = login;
-        return this;
     }
 
     public String getPassword() {
         return password;
     }
 
-    public Account setPassword(String password) {
+    public void setPassword(String password) {
         this.password = password;
-        return this;
     }
 
     public List<Balance> getBalances() {
         return balances;
     }
 
-    public Account setBalances(List<Balance> balances) {
+    public void setBalances(List<Balance> balances) {
         this.balances = balances;
-        return this;
     }
 }

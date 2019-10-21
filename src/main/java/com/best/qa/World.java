@@ -21,9 +21,9 @@ public class World {
         Balance balanceUsd = new BalanceUsd();
         Balance balanceEur = new BalanceEur();
 
-        Account account = new Account("vika_mak", "123");
         List<Balance> balances = Arrays.asList(balanceByn, balanceUsd, balanceEur);
-        User userVika = createUser("Vika", "Makarevich", account, balances);
+        Account account = new Account("vika_mak", "123", balances);
+        User userVika = new User("Vika", "Makarevich", account);
 
         List<Card> cards = Arrays.asList(new Card(userVika, balanceByn), new Card(userVika, balanceUsd), new Card(userVika, balanceEur));
 
@@ -40,12 +40,5 @@ public class World {
         }
 
         System.out.println("Hello World");
-    }
-
-    private static User createUser(String firstName, String lastName, Account account, List<Balance> balances) {
-        account.setBalances(balances);
-        User user = new User(firstName, lastName)
-                .setAccount(account);
-        return user;
     }
 }

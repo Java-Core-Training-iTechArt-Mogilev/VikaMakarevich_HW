@@ -11,17 +11,15 @@ public class Card {
         this.balance = balance;
     }
 
-    private Card setUser(User user) {
+    private void setUser(User user) {
         this.user = user;
-        return this;
     }
 
     public Balance getBalance() {
         return balance;
     }
 
-    private Card setBalance(Balance balance) {
+    private void setBalance(Balance balance) {
         this.balance = balance;
-        return this;
     }
 }

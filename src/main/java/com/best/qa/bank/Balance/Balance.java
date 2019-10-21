@@ -17,18 +17,16 @@ public abstract class Balance {
         return balanceSum;
     }
 
-    public Balance setBalanceSum(BigDecimal balanceSumByn) {
+    public void setBalanceSum(BigDecimal balanceSumByn) {
         this.balanceSum = balanceSumByn;
-        return this;
     }
 
     public CurrencyType getCurrencyType() {
         return currencyType;
     }
 
-    public Balance setCurrencyType(CurrencyType currencyType) {
+    public void setCurrencyType(CurrencyType currencyType) {
         this.currencyType = currencyType;
-        return this;
     }
 
     public BigDecimal decreaseBalance(BigDecimal sumMinus) {
@@ -39,15 +37,11 @@ public abstract class Balance {
             return balanceSum;
         }
 
-        result = balanceSum.subtract(sumMinus);
-        setBalanceSum(result);
-        return balanceSum;
+        return balanceSum = balanceSum.subtract(sumMinus);
     }
 
     public BigDecimal increaseBalance(BigDecimal sumPlus) {
-        BigDecimal result = balanceSum.add(sumPlus);
-        setBalanceSum(result);
-        return result;
+        return balanceSum = balanceSum.add(sumPlus);
     }
 
     public abstract void displayBalance();

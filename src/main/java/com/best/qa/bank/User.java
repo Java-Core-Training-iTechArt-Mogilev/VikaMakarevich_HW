@@ -10,30 +10,32 @@ public class User {
         this.lastName = lastName;
     }
 
+    public User(String firstName, String lastName, Account account) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     public String getFirstName() {
         return firstName;
     }
 
-    public User setFirstName(String firstName) {
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
-        return this;
     }
 
     public String getLastName() {
         return lastName;
     }
 
-    public User setLastName(String lastName) {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
-        return this;
     }
 
     public Account getAccount() {
         return account;
     }
 
-    public User setAccount(Account account) {
+    public void setAccount(Account account) {
         this.account = account;
-        return this;
     }
 }
